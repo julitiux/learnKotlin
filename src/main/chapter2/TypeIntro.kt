@@ -1,4 +1,4 @@
 fun main(args: Array<String>) {
-  var experiencePoints :Int = 5
+  var experiencePoints :Int = "thirty-two"
   println(experiencePoints)
 }
