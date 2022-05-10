@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-//  Type mismatch: inferred type is String but Int was expected
-  var experiencePoints :Int = "thirty-two"
+  var experiencePoints :Int = 5
+  experiencePoints += 5
   println(experiencePoints)
 }
