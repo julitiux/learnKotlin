@@ -1,21 +1,14 @@
-//COMPILE-TIME CONSTANTS
-//String
-//Int
-//Double
-//Float
-//Long
-//Short
-//Byte
-//Char
-//Boolean
 
 const val MAX_EXPERIENCE: Int = 5000
 
 fun main(args: Array<String>) {
 
-  val playerName = "Estragon" // Displaying type info
-  var experiencePoints = 5 // Displaying type info
+  val playerName = "Estragon"
+  var experiencePoints = 5
   experiencePoints += 5
   println(experiencePoints)
   println(playerName)
+
+  var hasSteed : Boolean
+
 }
