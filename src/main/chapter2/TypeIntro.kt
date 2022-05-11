@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-  var playerName: String = "Estragon"
+  val playerName: String = "Estragon" // Making a variable immutable
   var experiencePoints :Int = 5
   experiencePoints += 5
   println(experiencePoints)
