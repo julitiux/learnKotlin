@@ -18,4 +18,6 @@ fun main(args: Array<String>) {
   println("Excellent!")
   println("I have mead, wine, and LaCroix. What will you have?")
 
+  println(playerName.reversed())
+
 }
