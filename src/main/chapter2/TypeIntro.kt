@@ -1,4 +1,8 @@
+
+const val MAX_EXPERIENCE: Int = 5000
+
 fun main(args: Array<String>) {
+
   val playerName = "Estragon" // Displaying type info
   var experiencePoints = 5 // Displaying type info
   experiencePoints += 5
