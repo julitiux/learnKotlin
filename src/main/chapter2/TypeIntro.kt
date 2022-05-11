@@ -1,3 +1,13 @@
+//COMPILE-TIME CONSTANTS
+//String
+//Int
+//Double
+//Float
+//Long
+//Short
+//Byte
+//Char
+//Boolean
 
 const val MAX_EXPERIENCE: Int = 5000
 
