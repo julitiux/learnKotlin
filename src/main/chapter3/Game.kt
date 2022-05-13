@@ -4,11 +4,11 @@
 fun main(args: Array<String>) {
 
   val name = "Madrigal"
-  var healthPoints = 100
+  var healthPoints = 90
 
   if (healthPoints == 100)
     println(name + " is in a excelente condition !")
   else
-    println(name + " is un a awful condition!")
+    println(name + " is an awful condition!")
 
 }
