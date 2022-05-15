@@ -14,18 +14,21 @@ fun main(args: Array<String>) {
   else
     println("NONE")
 
-  if (healthPoints == 100)
-    println(name + " is in a excelente condition !")
+  val healthStatus = if (healthPoints == 100)
+    " is in a excelente condition !"
   else if (healthPoints >= 90)
-    println(name + " has a few scratches.")
+    "has a few scratches."
   else if (healthPoints >= 75)
     if (isBlessed)
-      println(name + " has some  minor wounds but is healing quite quickly!")
+      " has some  minor wounds but is healing quite quickly!"
     else
-      println(name + " has some minor wounds.")
+      " has some minor wounds."
   else if (healthPoints >= 15)
-    println(name + " looks pretty hurt.")
+    " looks pretty hurt."
   else
-    println(name + " is an awful condition!")
+    " is an awful condition!"
+
+  // Player Status
+  println(name + " " + healthStatus)
 
 }
