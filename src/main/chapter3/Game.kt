@@ -25,6 +25,6 @@ fun main(args: Array<String>) {
   }
 
   // Player Status
-  println(name + " " + healthStatus)
+  println("$name $healthStatus")
 
 }
