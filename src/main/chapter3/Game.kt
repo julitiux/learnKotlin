@@ -5,6 +5,12 @@ fun main(args: Array<String>) {
   val name = "Madrigal"
   var healthPoints = 89
   val isBlessed = true
+  val isInmortal = false
+
+  if (isBlessed && healthPoints > 50 || isInmortal)
+    println("GREEN")
+  else
+    println("NONE")
 
   if (healthPoints == 100)
     println(name + " is in a excelente condition !")
