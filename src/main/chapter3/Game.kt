@@ -13,19 +13,13 @@ fun main(args: Array<String>) {
 
   println(auraColor)
 
-  val healthStatus = if (healthPoints == 100)
-    " is in a excelente condition !"
-  else if (healthPoints >= 90)
-    "has a few scratches."
+  val healthStatus = if (healthPoints == 100) "is in a excelente condition !"
+  else if (healthPoints >= 90) "has a few scratches."
   else if (healthPoints >= 75)
-    if (isBlessed)
-      " has some  minor wounds but is healing quite quickly!"
-    else
-      " has some minor wounds."
-  else if (healthPoints >= 15)
-    " looks pretty hurt."
-  else
-    " is an awful condition!"
+    if (isBlessed) "has some  minor wounds but is healing quite quickly!"
+    else "has some minor wounds."
+  else if (healthPoints >= 15) "looks pretty hurt."
+  else "is an awful condition!"
 
   // Player Status
   println(name + " " + healthStatus)
