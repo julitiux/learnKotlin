@@ -9,10 +9,9 @@ fun main(args: Array<String>) {
 
   //Aura
   val auraVisible = isBlessed && healthPoints > 50 || isInmortal
-  if (auraVisible)
-    println("GREEN")
-  else
-    println("NONE")
+  val auraColor = if (auraVisible) "GREEN" else "NONE"
+
+  println(auraColor)
 
   val healthStatus = if (healthPoints == 100)
     " is in a excelente condition !"
