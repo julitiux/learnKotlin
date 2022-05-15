@@ -7,7 +7,9 @@ fun main(args: Array<String>) {
   val isBlessed = true
   val isInmortal = false
 
-  if (isBlessed && healthPoints > 50 || isInmortal)
+  //Aura
+  val auraVisible = isBlessed && healthPoints > 50 || isInmortal
+  if (auraVisible)
     println("GREEN")
   else
     println("NONE")
