@@ -30,12 +30,28 @@ fun main(args: Array<String>) {
   }
 
   // Player Status
-  println(
-    "(Aura: $auraColor)" +
-      "(Blessed: ${if (isBlessed) "YES" else "NO"})"
-  )
-  println("$name $healthStatus")
+  val formatString = "(HP)(A)(B) -> (H)"
+  val formatSpecifiers = "HP|H|A|B".toRegex()
 
-  println("(HP: $healthPoints)(Aura: $auraColor) -> $healthStatus")
+  var result = StringBuffer()
 
+  var i = 0
+  formatSpecifiers.findAll(formatString).forEach { match ->
+    result.append(formatString.substring(i,match.range.start))
+    println ("**************")
+    println (match.range.start)
+    println (formatString.substring(i,match.range.start))
+    println (match.value)
+    println ("**************")
+    result.append(when (match.value) {
+      "H" -> "$name $healthStatus"
+      "HP" -> "HP: $healthPoints"
+      "A" -> "A: $auraColor"
+      "B" -> "B: $isBlessed"
+      else -> "?"
+    })
+    i = match.range.last+1
+  }
+  result.append(formatString.substring(i))
+  println(result)
 }
