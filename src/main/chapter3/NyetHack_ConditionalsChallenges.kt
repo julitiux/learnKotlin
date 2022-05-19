@@ -36,4 +36,6 @@ fun main(args: Array<String>) {
   )
   println("$name $healthStatus")
 
+  println("(HP: $healthPoints)(Aura: $auraColor) -> $healthStatus")
+
 }
