@@ -14,6 +14,18 @@ fun main(args: Array<String>) {
 
   println(auraColor)
 
+  val healthStatus = formatHealthStatus(healthPoints, isBlessed)
+
+  // Player Status
+  println(
+    "(Aura: $auraColor)" +
+      "(Blessed: ${if (isBlessed) "YES" else "NO"})"
+  )
+  println("$name $healthStatus")
+
+}
+
+private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
   val healthStatus = when (healthPoints) {
     100 -> "is in a excelente condition !"
     in 90..99 -> "has a few scratches."
@@ -24,12 +36,5 @@ fun main(args: Array<String>) {
     in 15..74 -> "looks pretty hurt."
     else -> "is an awful condition!"
   }
-
-  // Player Status
-  println(
-    "(Aura: $auraColor)" +
-      "(Blessed: ${if (isBlessed) "YES" else "NO"})"
-  )
-  println("$name $healthStatus")
-
+  return healthStatus
 }
