@@ -30,5 +30,6 @@ fun main(args: Array<String>) {
     "(Aura: $auraColor)" +
       "(Blessed: ${if (isBlessed) "YES" else "NO"})"
   )
-  
+  println("$name $healthStatus")
+
 }
