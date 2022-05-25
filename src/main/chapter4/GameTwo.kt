@@ -43,3 +43,7 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
   }
   return healthStatus
 }
+
+private fun castFireball(){
+  println("A glass of fireball springs into existence,")
+}
