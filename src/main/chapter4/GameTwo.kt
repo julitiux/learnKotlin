@@ -15,6 +15,8 @@ fun main(args: Array<String>) {
   // Player Status
   printPlayerStatus(auraColor, isBlessed)
 
+  castFireball()
+
 }
 
 private fun printPlayerStatus(auraColor: String, isBlessed: Boolean) {
