@@ -44,6 +44,5 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
     else -> "is an awful condition!"
   }
 
-private fun castFireball(numFireballs: Int = 2) {
+private fun castFireball(numFireballs: Int = 2) =
   println("A glass of fireball springs into existence. (x$numFireballs)")
-}
