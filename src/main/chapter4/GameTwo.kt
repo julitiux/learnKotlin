@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
   // Player Status
   printPlayerStatus(auraColor, isBlessed, healthStatus, name)
 
-  castFireball(5)
+  castFireball()
 
 }
 
