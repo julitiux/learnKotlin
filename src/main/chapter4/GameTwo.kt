@@ -1,4 +1,3 @@
-
 // Chapter 4
 
 fun main(args: Array<String>) {
@@ -13,17 +12,18 @@ fun main(args: Array<String>) {
   //HealthStatus
   val healthStatus = formatHealthStatus(healthPoints, isBlessed)
   // Player Status
-  printPlayerStatus(auraColor, isBlessed)
+  printPlayerStatus(auraColor, isBlessed, healthStatus, name)
 
-  castFireball()
+  castFireball(5)
 
 }
 
-private fun printPlayerStatus(auraColor: String, isBlessed: Boolean) {
+private fun printPlayerStatus(auraColor: String, isBlessed: Boolean, healthStatus: String, name:String) {
   println(
     "(Aura: $auraColor)" +
       "(Blessed: ${if (isBlessed) "YES" else "NO"})"
   )
+  println("$name $healthStatus")
 }
 
 private fun auraColor(isBlessed: Boolean, healthPoints: Int, isInmortal: Boolean): String {
@@ -46,6 +46,6 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
   return healthStatus
 }
 
-private fun castFireball(){
-  println("A glass of fireball springs into existence,")
+private fun castFireball(numFireballs: Int) {
+  println("A glass of fireball springs into existence. (x$numFireballs)")
 }
