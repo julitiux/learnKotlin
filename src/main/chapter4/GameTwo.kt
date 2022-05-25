@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
 
 }
 
-private fun printPlayerStatus(auraColor: String, isBlessed: Boolean, healthStatus: String, name:String) {
+private fun printPlayerStatus(auraColor: String, isBlessed: Boolean, healthStatus: String, name: String) {
   println(
     "(Aura: $auraColor)" +
       "(Blessed: ${if (isBlessed) "YES" else "NO"})"
@@ -32,8 +32,8 @@ private fun auraColor(isBlessed: Boolean, healthPoints: Int, isInmortal: Boolean
   return auraColor
 }
 
-private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
-  val healthStatus = when (healthPoints) {
+private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
+  when (healthPoints) {
     100 -> "is in a excelente condition !"
     in 90..99 -> "has a few scratches."
     in 75..89 -> if (isBlessed)
@@ -43,8 +43,6 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
     in 15..74 -> "looks pretty hurt."
     else -> "is an awful condition!"
   }
-  return healthStatus
-}
 
 private fun castFireball(numFireballs: Int = 2) {
   println("A glass of fireball springs into existence. (x$numFireballs)")
