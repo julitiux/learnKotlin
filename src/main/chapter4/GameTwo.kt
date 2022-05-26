@@ -13,7 +13,13 @@ fun main(args: Array<String>) {
   val healthStatus = formatHealthStatus(healthPoints, isBlessed)
   // Player Status
   printPlayerStatus(auraColor, isBlessed, healthStatus, name)
-  printPlayerStatus("NONE", true,"Mandrigal", healthStatus)
+  printPlayerStatus("NONE", true, "Mandrigal", healthStatus)
+  printPlayerStatus(
+    auraColor = "NONE",
+    isBlessed = true,
+    name = "Mandrigal",
+    healthStatus = healthStatus
+  )
 
   castFireball()
 
