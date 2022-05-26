@@ -20,6 +20,12 @@ fun main(args: Array<String>) {
     name = "Mandrigal",
     healthStatus = healthStatus
   )
+  printPlayerStatus(
+    isBlessed = true,
+    auraColor = "NONE",
+    healthStatus = healthStatus,
+    name = "Mandrigal"
+  )
 
   castFireball()
 
