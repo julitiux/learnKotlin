@@ -59,3 +59,8 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
 
 private fun castFireball(numFireballs: Int = 2) =
   println("A glass of fireball springs into existence. (x$numFireballs)")
+
+private fun shoudlBeAString(): String{
+  TODO()
+  println("unreachable")
+}
