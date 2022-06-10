@@ -1,3 +1,6 @@
 fun main() {
-  Anonuy
+  println({
+    val currentYear = 2018
+    "Welcome to SimVillage, Mayor! (copyright $currentYear)"
+  }())
 }
