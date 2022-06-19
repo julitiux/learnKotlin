@@ -1,6 +1,6 @@
 fun main() {
 
-  runSimulation("Julito") { playerName, numBuildings ->
+  runSimulation("Julito", ::printConstructionCost) { playerName, numBuildings ->
     val currentYear = 2018
     println("Adding $numBuildings houses")
     "Welcome to SimVillage, $playerName! (copyright $currentYear)"
@@ -8,8 +8,9 @@ fun main() {
 
 }
 
-inline fun runSimulation(playerName: String, costPrinter: (Int) -> String, greetingFunction: (String, Int) -> String) {
+inline fun runSimulation(playerName: String, costPrinter: (Int) -> Unit, greetingFunction: (String, Int) -> String) {
   val numBuildings = (1..3).shuffled().last() //Randomly selects 1,2, or 3
+  costPrinter(numBuildings)
   println(greetingFunction(playerName, numBuildings))
 }
 
