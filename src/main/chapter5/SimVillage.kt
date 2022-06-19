@@ -7,6 +7,7 @@ fun main() {
   }
 
   println(greetingFunction("Julito", 2))
+  runSimulation("Julito", greetingFunction)
 
 }
 
