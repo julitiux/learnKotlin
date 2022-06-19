@@ -6,7 +6,6 @@ fun main() {
     "Welcome to SimVillage, $playerName! (copyright $currentYear)"
   }
 
-  println(greetingFunction("Julito", 2))
   runSimulation("Julito", greetingFunction)
 
 }
