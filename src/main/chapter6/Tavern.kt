@@ -1,5 +1,5 @@
 fun main() {
-  var beverage = readLine()
+  var beverage = readLine().capitalize()
 //  beverage = null
 
   println(beverage)
