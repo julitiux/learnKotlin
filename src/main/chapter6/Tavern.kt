@@ -1,4 +1,4 @@
 fun main() {
-  var signatureDrink = "Buttered Ale"
-  signatureDrink = null
+  var beverage = readLine()
+  println(beverage)
 }
