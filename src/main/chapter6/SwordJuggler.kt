@@ -5,6 +5,8 @@ fun main() {
     swordsJuggLing = 2
   }
 
+  swordsJuggLing = swordsJuggLing!!.plus(1)
+
   println("You juggle $swordsJuggLing words")
 
 }
