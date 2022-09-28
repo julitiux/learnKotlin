@@ -5,11 +5,14 @@ fun main() {
     swordsJuggLing = 2
   }
 
-  proficiencyCheck(swordsJuggLing)
-  swordsJuggLing = swordsJuggLing!!.plus(1)
+  try {
+    proficiencyCheck(swordsJuggLing)
+    swordsJuggLing = swordsJuggLing!!.plus(1)
+  } catch (e: Exception) {
+    println(e)
+  }
 
   println("You juggle $swordsJuggLing words")
-
 }
 
 fun proficiencyCheck(swordJuggling: Int?) {
