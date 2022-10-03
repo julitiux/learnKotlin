@@ -13,11 +13,16 @@ private fun placeOrder(menuData: String) {
   val message = "Madrigal buys a $name ($type) for $price"
   println(message)
 
-  val phrase = "Ah, dele¡icious $name"
-  println("Madrigal exclaims: ${toDragonSpeak(phrase)}")
+  val phrase = if (name == "Dragon's Breath") {
+    "Madrigal exclaims: ${toDragonSpeak("Ah, delicius $name!")}"
+  } else {
+    "Madrigal says: thanks for the $name."
+  }
+  println(phrase)
+  
 }
 
-private fun toDragonSpeak(phrase: String) {
+private fun toDragonSpeak(phrase: String) =
   phrase.replace(Regex("[aeiou]]")) {
     when (it.value) {
       "a" -> "4"
@@ -28,4 +33,3 @@ private fun toDragonSpeak(phrase: String) {
       else -> it.value
     }
   }
-}
