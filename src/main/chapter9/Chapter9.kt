@@ -24,4 +24,10 @@ fun main() {
 //  Using let
   val firstItemSquared = listOf(1, 2, 3).first().let { it * it }
 
+//  let can be combined to work on a nullable type
+  fun formatGreeting(viGuest:String?): String {
+    return viGuest.let {
+      "Welcome, $it. Please go straight back - your table is ready."
+    } ?: "Welcum to the tavern. You'llbe seated soon."
+  }
 }
