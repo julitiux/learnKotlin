@@ -55,4 +55,10 @@ fun main() {
     .run(::playerCreateMessage)
     .run(::println)
 
+//  There is a second flavor of run
+  val healthPoints: Int = 50
+  val status = run {
+    if (healthPoints == 100) "perfect health" else "has injuries"
+  }
+
 }
