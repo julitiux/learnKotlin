@@ -16,5 +16,10 @@ fun main() {
     setExecutable(false)
   }
 
+//  Let
+//  let scopes a variable to the lambda provided and makes the keyword it
+
+  val firstElement = listOf(1, 2, 3).first()
+  val firstItemSquared = firstElement * firstElement
 
 }
