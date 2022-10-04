@@ -61,4 +61,12 @@ fun main() {
     if (healthPoints == 100) "perfect health" else "has injuries"
   }
 
+
+//  with
+//  with is a variant of run. It behaves identically, but it uses a different calling convention. Unlike the standard functions you have seen so far, with requires its argument to be accepted as the first parameter rather than calling the standard function on a receiver type
+
+  val nameTooLong = with("Polarcubis, Supreme Master of NyetHack"){
+    length >= 20
+  }
+
 }
