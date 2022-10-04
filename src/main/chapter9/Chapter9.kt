@@ -69,4 +69,13 @@ fun main() {
     length >= 20
   }
 
+
+//  also
+//  The also function works very similarly to the let function. Just like let, also passes the receiver you call it on as an argument to a lambda you provide. But there is one major difference between let and also: also returns the receiver, rather than the result of the lambda.
+
+  var fileContents: List<String>
+  File("file.txt")
+    .also { println(it.name) }
+    .also { fileContents = it.readLines() }
+
 }
