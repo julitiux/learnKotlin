@@ -78,4 +78,15 @@ fun main() {
     .also { println(it.name) }
     .also { fileContents = it.readLines() }
 
+
+//  takeIf
+//  without takeIf, thos would be more verbose
+  var file = File("myFile.txt")
+  var fileContentz = if (file.canRead() && file.canWrite()){
+    file.readText()
+  } else {
+    null
+  }
+
+
 }
