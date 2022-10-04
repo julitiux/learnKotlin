@@ -88,5 +88,10 @@ fun main() {
     null
   }
 
+//  with takeIf
+  val fileContentsz = File("myFile.txt")
+    .takeIf { it.canRead() && it.canWrite() }
+    ?.readText()
+
 
 }
