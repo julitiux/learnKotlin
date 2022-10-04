@@ -33,11 +33,26 @@ fun main() {
   }
 
 
-//  run
+  //  run
 //  run returns the lambda result
   fun nameIsLong(name: String) = name.length >= 20
 
-  println("Julito".run(::nameIsLong))
-  println("Polarcubis, Supreme Master of NyetHack".run(::nameIsLong))
+  "Julito".run(::nameIsLong)
+  "Polarcubis, Supreme Master of NyetHack".run(::nameIsLong)
+
+  //  or
+  fun playerCreateMessage(nameTooLong: Boolean): String {
+    return if (nameTooLong) {
+      "Name is too long. Please choose another name."
+    } else {
+      "Welcome, adventurer"
+    }
+  }
+
+//  final example of run
+  "Polarcubis, Supreme Master of NyetHack"
+    .run(::nameIsLong)
+    .run(::playerCreateMessage)
+    .run(::println)
 
 }
