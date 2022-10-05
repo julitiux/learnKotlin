@@ -89,9 +89,9 @@ fun main() {
   }
 
 //  with takeIf
+//  takeIf works a bit differently than the other standard functions: It evaluates a condition provided in a lambda, called a predicate, that returns either true or false depending on the conditions defined. If the condition evaluates as true, the receiver is returned from takeIf. If the condition is false, null is returned instead.
   val fileContentsz = File("myFile.txt")
     .takeIf { it.canRead() && it.canWrite() }
     ?.readText()
-
-
+  
 }
