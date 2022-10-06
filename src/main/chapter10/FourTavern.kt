@@ -8,7 +8,9 @@ val patronList = listOf("Eli", "Mordoc", "Sophie")
 
 fun main(args: Array<String>) {
   placeOrder("shabdy,Dragon's Breath,5.91")
-  println(patronList[0])
+  println(patronList[4])
+  println(patronList.first())
+  println(patronList.last())
 }
 
 fun performPurchase4(price: Double) {
