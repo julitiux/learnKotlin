@@ -4,7 +4,7 @@ const val TAVERN_NAME_4 = "Taernyl's Folly"
 
 var playerGold4 = 10
 var playerSilver4 = 10
-val patronList = listOf("Eli", "Mordoc", "Sophie")
+val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 
 fun main(args: Array<String>) {
 
@@ -21,6 +21,11 @@ fun main(args: Array<String>) {
   }
 
   placeOrder("shabdy,Dragon's Breath,5.91")
+
+  println(patronList)
+  patronList.remove("Eli")
+  patronList.add("Alex")
+  println(patronList)
 
 }
 
