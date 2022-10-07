@@ -9,7 +9,9 @@ val patronList = listOf("Eli", "Mordoc", "Sophie")
 fun main(args: Array<String>) {
   placeOrder("shabdy,Dragon's Breath,5.91")
 
-  println(patronList.getOrElse(4){"Unknown Patron"})
+  val fifthPatrone = patronList.getOrNull(4) ?: "Unknown Patron"
+
+  println(fifthPatrone)
 
   println(patronList.first())
   println(patronList.last())
