@@ -7,14 +7,15 @@ var playerSilver4 = 10
 val patronList = listOf("Eli", "Mordoc", "Sophie")
 
 fun main(args: Array<String>) {
+
+  if(patronList.contains("Eli")){
+    println("The tavern master says: Eli's in the back playing cards.")
+  } else {
+    println("The tavern master says: Eli isn't here.")
+  }
+
   placeOrder("shabdy,Dragon's Breath,5.91")
 
-  val fifthPatrone = patronList.getOrNull(4) ?: "Unknown Patron"
-
-  println(fifthPatrone)
-
-  println(patronList.first())
-  println(patronList.last())
 }
 
 fun performPurchase4(price: Double) {
