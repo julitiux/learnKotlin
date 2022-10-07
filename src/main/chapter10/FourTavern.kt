@@ -14,6 +14,12 @@ fun main(args: Array<String>) {
     println("The tavern master says: Eli isn't here.")
   }
 
+  if(patronList.containsAll(listOf("Sophie", "Mordoc"))){
+    println("the tavern master says: Yea, they're seated by the stew kettle.")
+  }else{
+    println("the tavern master says: Nay, they departed hours ago.")
+  }
+
   placeOrder("shabdy,Dragon's Breath,5.91")
 
 }
