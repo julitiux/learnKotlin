@@ -8,7 +8,9 @@ val patronList = listOf("Eli", "Mordoc", "Sophie")
 
 fun main(args: Array<String>) {
   placeOrder("shabdy,Dragon's Breath,5.91")
-  println(patronList[4])
+
+  println(patronList.getOrElse(4){"Unknown Patron"})
+
   println(patronList.first())
   println(patronList.last())
 }
