@@ -6,7 +6,7 @@ const val TAVERN_NAME_4 = "Taernyl's Folly"
 var playerGold4 = 10
 var playerSilver4 = 10
 val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
-
+val lastName = listOf("Ironfoot", "Fernsworth", "Baggins")
 val menuList = File("data/tavern-menu-items.txt")
   .readText()
   .split("\n")
@@ -25,13 +25,11 @@ fun main(args: Array<String>) {
     println("the tavern master says: Nay, they departed hours ago.")
   }
 
-  patronList.forEachIndexed { index, patron ->
-    println("Good eening, $patron - you're ${index + 1} in Line.")
-    placeOrder(patron, menuList.shuffled().first())
-  }
-
-  menuList.forEachIndexed { index, data ->
-    println("$index : $data")
+  (0..9).forEach {
+    val first = patronList.shuffled().first()
+    val last = lastName.shuffled().first()
+    val name = "$first $last"
+    println(name)
   }
 
 }
