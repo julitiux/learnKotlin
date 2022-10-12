@@ -22,12 +22,9 @@ fun main(args: Array<String>) {
 
   placeOrder("shabdy,Dragon's Breath,5.91")
 
-  println(patronList)
-  patronList.remove("Eli")
-  patronList.add("Alex")
-  patronList.add(0, "Alex")
-  patronList[0] = "Alexis"
-  println(patronList)
+  for (patron in patronList) {
+    println("Good eening, $patron")
+  }
 
 }
 
