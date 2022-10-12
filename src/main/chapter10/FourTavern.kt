@@ -30,6 +30,10 @@ fun main(args: Array<String>) {
     placeOrder(patron, "shabdy,Dragon's Breath,5.91")
   }
 
+  menuList.forEachIndexed { index, data ->
+    println("$index : $data")
+  }
+
 }
 
 fun performPurchase4(price: Double) {
