@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
 
   placeOrder("shabdy,Dragon's Breath,5.91")
 
-  for (patron in patronList) {
+  patronList.forEach { patron ->
     println("Good eening, $patron")
   }
 
