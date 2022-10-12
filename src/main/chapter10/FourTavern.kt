@@ -20,10 +20,9 @@ fun main(args: Array<String>) {
     println("the tavern master says: Nay, they departed hours ago.")
   }
 
-  placeOrder("shabdy,Dragon's Breath,5.91")
-
   patronList.forEachIndexed { index,  patron ->
     println("Good eening, $patron - you're ${index + 1} in Line.")
+    placeOrder(patron, "shabdy,Dragon's Breath,5.91")
   }
 
 }
@@ -48,21 +47,21 @@ private fun displayBalance() {
   println("Player's purse balance: Gold: $playerGold4 , Silver: $playerSilver4")
 }
 
-private fun placeOrder(menuData: String) {
+private fun placeOrder(patronName: String, menuData: String) {
   val indexOfApostrophe = TAVERN_NAME_4.indexOf('\'')
   val tavernMaster = TAVERN_NAME_4.substring(0 until indexOfApostrophe)
-  println("Madrigal speaks with $tavernMaster about their order.")
+  println("$patronName speaks with $tavernMaster about their order.")
 
   val (type, name, price) = menuData.split(',')
-  val message = "Madrigal buys a $name ($type) for $price"
+  val message = "$patronName buys a $name ($type) for $price."
   println(message)
 
-  performPurchase4(price.toDouble())
+//  performPurchase4(price.toDouble())
 
   val phrase = if (name == "Dragon's Breath") {
-    "Madrigal exclaims: ${toDragonSpeak("Ah, delicius $name!")}"
+    "$patronName exclaims: ${toDragonSpeak("Ah, delicius $name!")}"
   } else {
-    "Madrigal says: thanks for the $name."
+    "$patronName says: thanks for the $name."
   }
   println(phrase)
 
