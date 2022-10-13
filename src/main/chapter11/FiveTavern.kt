@@ -11,7 +11,7 @@ val uniquePatrons5 = mutableSetOf<String>()
 val menuList5 = File("data/tavern-menu-items.txt")
   .readText()
   .split("\n")
-val patronGold = mapOf("ELi" to 10.5, "Mordoc" to 8.0, "Sophie" to 5.5)
+val patronGold5 = mapOf("ELi" to 10.5, "Mordoc" to 8.0, "Sophie" to 5.5)
 
 fun main(args: Array<String>) {
 
@@ -42,7 +42,10 @@ fun main(args: Array<String>) {
     orderCount++
   }
 
-  println(patronGold)
+  println(patronGold5)
+  println(patronGold5["Eli"])
+  println(patronGold5["Mordoc"])
+  println(patronGold5["Sophie"])
 
 }
 
