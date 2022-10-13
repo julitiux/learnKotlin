@@ -8,6 +8,8 @@ private fun menuPrint() {
   val menuList = File("data/tavern-menu-items.txt")
     .readText()
     .split("\n")
+
+  println("*** Welcome to Taernyl's Folly *** \n")
   menuList.forEach { menu ->
     var (type, subMenu, price) = menu.split(",")
     var subMenuMore = subMenu.capitalize().padEnd((30 - price.length), '.') + price
