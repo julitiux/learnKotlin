@@ -1,5 +1,4 @@
 import java.io.File
-import kotlin.math.roundToInt
 
 const val TAVERN_NAME_5 = "Taernyl's Folly"
 
@@ -47,20 +46,9 @@ fun main(args: Array<String>) {
 
 }
 
-fun performPurchase5(price: Double) {
-  displayBalance()
-  val totalPurse = playerGold5 + (playerSilver5 / 100.0)
-  println("Total purse: $totalPurse")
-  println("Purchasing item for $price")
-
-  val remainingBalance = totalPurse - price
-  println("Remaining balance: ${"%.2f".format(remainingBalance)}")
-
-  val remainingGold = remainingBalance.toInt()
-  val remainigSilver = (remainingBalance % 1 * 100).roundToInt()
-  playerGold5 = remainingGold
-  playerSilver5 = remainigSilver
-  displayBalance()
+fun performPurchase5(price: Double, patronName: String) {
+  val totalPurchase = patronGold5.getValue(patronName)
+  patronGold5[patronName] = totalPurchase - price
 }
 
 private fun displayBalance() {
@@ -76,7 +64,7 @@ private fun placeOrder5(patronName: String, menuData: String) {
   val message = "$patronName buys a $name ($type) for $price."
   println(message)
 
-//  performPurchase5(price.toDouble())
+  performPurchase5(price.toDouble(), patronName)
 
   val phrase = if (name == "Dragon's Breath") {
     "$patronName exclaims: ${toDragonSpeak5("Ah, delicius $name!")}"
