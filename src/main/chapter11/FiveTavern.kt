@@ -11,7 +11,7 @@ val uniquePatrons5 = mutableSetOf<String>()
 val menuList5 = File("data/tavern-menu-items.txt")
   .readText()
   .split("\n")
-val patronGold5 = mapOf("Eli" to 10.5, "Mordoc" to 8.0, "Sophie" to 5.5)
+val patronGold5 = mutableMapOf<String, Double>()
 
 fun main(args: Array<String>) {
 
@@ -35,17 +35,15 @@ fun main(args: Array<String>) {
   }
 
   println(uniquePatrons5)
+  uniquePatrons5.forEach {
+    patronGold5[it] = 6.0
+  }
 
   var orderCount = 0
   while (orderCount <= 9) {
     placeOrder5(uniquePatrons5.shuffled().first(), menuList5.shuffled().first())
     orderCount++
   }
-
-  println(patronGold5)
-  println(patronGold5["Eli"])
-  println(patronGold5["Mordoc"])
-  println(patronGold5["Sophie"])
 
 }
 
