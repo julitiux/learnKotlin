@@ -1,6 +1,5 @@
 fun main(args: Array<String>) {
-
-  val name = "Madrigal"
+  
   var healthPoints = 89
   val isBlessed = true
   val isInmortal = false
