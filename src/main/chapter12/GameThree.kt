@@ -6,6 +6,7 @@ fun main(args: Array<String>) {
   val isInmortal = false
 
   val player = Player()
+  player.castFireball()
 
   //Aura
   val auraColor = auraColor(isBlessed, healthPoints, isInmortal)
@@ -26,8 +27,6 @@ fun main(args: Array<String>) {
     healthStatus = healthStatus,
     name = "Mandrigal"
   )
-
-  castFireball()
 
 }
 
@@ -56,9 +55,6 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
     in 15..74 -> "looks pretty hurt."
     else -> "is an awful condition!"
   }
-
-private fun castFireball(numFireballs: Int = 2) =
-  println("A glass of fireball springs into existence. (x$numFireballs)")
 
 private fun shoudlBeAString(): String{
   TODO()
