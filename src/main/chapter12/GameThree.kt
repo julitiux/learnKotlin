@@ -1,41 +1,26 @@
 fun main(args: Array<String>) {
 
   val player = Player()
-  player.name = "estragon"
   println(player.name + "TheBrave")
   player.castFireball()
 
-  //Aura
-  val auraColor = auraColor(isBlessed, healthPoints, isInmortal)
-  //HealthStatus
-  val healthStatus = formatHealthStatus(healthPoints, isBlessed)
+  // Aura
+  val auraColor = player.auraColor()
   // Player Status
-  printPlayerStatus(auraColor, isBlessed, healthStatus, player.name)
-  printPlayerStatus("NONE", true, "Mandrigal", healthStatus)
-  printPlayerStatus(
-    auraColor = "NONE",
-    isBlessed = true,
-    name = "Mandrigal",
-    healthStatus = healthStatus
-  )
-  printPlayerStatus(
-    isBlessed = true,
-    auraColor = "NONE",
-    healthStatus = healthStatus,
-    name = "Mandrigal"
-  )
-
+  printPlayerStatus(player)
+  // Aura
+  player.auraColor()
 }
 
-private fun printPlayerStatus(auraColor: String, isBlessed: Boolean, healthStatus: String, name: String) {
+private fun printPlayerStatus(player: Player) {
   println(
-    "(Aura: $auraColor)" +
-      "(Blessed: ${if (isBlessed) "YES" else "NO"})"
+    "(Aura: ${player.auraColor()})" +
+      "(Blessed: ${if (player.isBlessed) "YES" else "NO"})"
   )
-  println("$name $healthStatus")
+  println("${player.name} ${player.formatHealthStatus()}")
 }
 
-private fun shoudlBeAString(): String{
+private fun shoudlBeAString(): String {
   TODO()
   println("unreachable")
 }
