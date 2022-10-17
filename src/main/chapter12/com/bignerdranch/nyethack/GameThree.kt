@@ -1,3 +1,5 @@
+import com.bignerdranch.nyethack.Player
+
 fun main(args: Array<String>) {
 
   val player = Player()
@@ -6,7 +8,7 @@ fun main(args: Array<String>) {
 
   // Aura
   val auraColor = player.auraColor()
-  // Player Status
+  // com.bignerdranch.nyethack.Player Status
   printPlayerStatus(player)
   // Aura
   player.auraColor()

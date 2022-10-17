@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
   val auraColor = auraColor(isBlessed, healthPoints, isInmortal)
   //HealthStatus
   val healthStatus = formatHealthStatus(healthPoints, isBlessed)
-  // Player Status
+  // com.bignerdranch.nyethack.Player Status
   printPlayerStatus(auraColor, isBlessed, healthStatus, name)
   printPlayerStatus("NONE", true, "Mandrigal", healthStatus)
   printPlayerStatus(

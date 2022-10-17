@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
     else -> "is an awful condition!"
   }
 
-  // Player Status
+  // com.bignerdranch.nyethack.Player Status
   println(
     "(Aura: $auraColor)" +
       "(Blessed: ${if (isBlessed) "YES" else "NO"})"

@@ -60,7 +60,7 @@ fun performPurchase5(price: Double, patronName: String) {
 }
 
 private fun displayBalance() {
-  println("Player's purse balance: Gold: $playerGold5 , Silver: $playerSilver5")
+  println("com.bignerdranch.nyethack.Player's purse balance: Gold: $playerGold5 , Silver: $playerSilver5")
 }
 
 private fun placeOrder5(patronName: String, menuData: String) {

@@ -29,7 +29,7 @@ fun main(args: Array<String>) {
     else -> "is an awful condition!"
   }
 
-  // Player Status
+  // com.bignerdranch.nyethack.Player Status
   val formatString = "(HP)(A)(B) -> (H)"
   val formatSpecifiers = "HP|H|A|B".toRegex()
 

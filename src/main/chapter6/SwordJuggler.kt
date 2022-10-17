@@ -16,7 +16,7 @@ fun main() {
 }
 
 fun proficiencyCheck(swordJuggling: Int?) {
-  checkNotNull(swordJuggling, { "Player cannot juggle swords" })
+  checkNotNull(swordJuggling, { "com.bignerdranch.nyethack.Player cannot juggle swords" })
 }
 
-class UnskilledSwordJugglerException() : IllegalStateException("Player cannot juggle swords")
+class UnskilledSwordJugglerException() : IllegalStateException("com.bignerdranch.nyethack.Player cannot juggle swords")
