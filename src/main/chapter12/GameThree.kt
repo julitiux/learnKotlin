@@ -1,9 +1,5 @@
 fun main(args: Array<String>) {
-
-  var healthPoints = 89
-  val isBlessed = true
-  val isInmortal = false
-
+  
   val player = Player()
   player.name = "estragon"
   println(player.name + "TheBrave")
