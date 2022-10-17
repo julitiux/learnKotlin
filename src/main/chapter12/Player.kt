@@ -10,13 +10,13 @@ class Player {
   val isBlessed = true
   private val isInmortal = false
 
-  private fun auraColor(): String {
+  fun auraColor(): String {
     val auraVisible = isBlessed && healthPoints > 50 || isInmortal
     val auraColor = if (auraVisible) "GREEN" else "NONE"
     return auraColor
   }
 
-  private fun formatHealthStatus() =
+  fun formatHealthStatus() =
     when (healthPoints) {
       100 -> "is in a excelente condition !"
       in 90..99 -> "has a few scratches."
