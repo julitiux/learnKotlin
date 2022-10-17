@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-  
+
   val player = Player()
   player.name = "estragon"
   println(player.name + "TheBrave")
