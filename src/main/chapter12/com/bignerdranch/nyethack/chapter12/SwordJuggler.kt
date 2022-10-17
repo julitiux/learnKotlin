@@ -1,4 +1,4 @@
-package com.bignerdranch.nyethack
+package com.bignerdranch.nyethack.chapter12
 
 fun main() {
   var swordsJuggLing: Int? = null
