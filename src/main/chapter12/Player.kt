@@ -10,7 +10,7 @@ class Player {
   val isBlessed = true
   private val isInmortal = false
 
-  private fun auraColor(isBlessed: Boolean, healthPoints: Int, isInmortal: Boolean): String {
+  private fun auraColor(): String {
     val auraVisible = isBlessed && healthPoints > 50 || isInmortal
     val auraColor = if (auraVisible) "GREEN" else "NONE"
     return auraColor
