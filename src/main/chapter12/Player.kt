@@ -16,7 +16,7 @@ class Player {
     return auraColor
   }
 
-  private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
+  private fun formatHealthStatus() =
     when (healthPoints) {
       100 -> "is in a excelente condition !"
       in 90..99 -> "has a few scratches."
