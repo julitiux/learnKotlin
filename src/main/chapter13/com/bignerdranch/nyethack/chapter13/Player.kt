@@ -13,8 +13,10 @@ class Player(
       field = value.trim()
     }
 
-  constructor(name: String) : this(name, healthPoints = 100, isBlessed = true, isImmortal = false)
-  
+  constructor(name: String) : this(name, healthPoints = 100, isBlessed = true, isImmortal = false) {
+    if (name.lowercase() == "kar") healthPoints = 40
+  }
+
   fun auraColor(): String {
     val auraVisible = isBlessed && healthPoints > 50 || isImmortal
     val auraColor = if (auraVisible) "GREEN" else "NONE"
