@@ -19,6 +19,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/chapter9" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/chapter11" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/chapter12" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/chapter13" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
