@@ -4,7 +4,7 @@ import com.bignerdranch.nyethack.chapter12.Player
 
 fun main(args: Array<String>) {
 
-  val player = Player()
+  val player = Player("Madrigal", 89, true, false)
   println(player.name + "TheBrave")
   player.castFireball()
 
