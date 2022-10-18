@@ -2,7 +2,7 @@ package com.bignerdranch.nyethack.chapter13
 
 fun main(args: Array<String>) {
 
-  val player = Player("Madrigal", 89, true, false)
+  val player = Player("Madrigal")
   println(player.name + "TheBrave")
   player.castFireball()
 
