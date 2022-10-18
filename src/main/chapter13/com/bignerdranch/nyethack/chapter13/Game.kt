@@ -1,7 +1,5 @@
 package com.bignerdranch.nyethack.chapter13
 
-import com.bignerdranch.nyethack.chapter12.Player
-
 fun main(args: Array<String>) {
 
   val player = Player("Madrigal", 89, true, false)
@@ -10,13 +8,13 @@ fun main(args: Array<String>) {
 
   // Aura
   val auraColor = player.auraColor()
-  // com.bignerdranch.nyethack.Player Status
+  // Player Status
   printPlayerStatus(player)
   // Aura
   player.auraColor()
 }
 
-private fun printPlayerStatus(player: Player) {
+fun printPlayerStatus(player: Player) {
   println(
     "(Aura: ${player.auraColor()})" +
       "(Blessed: ${if (player.isBlessed) "YES" else "NO"})"
