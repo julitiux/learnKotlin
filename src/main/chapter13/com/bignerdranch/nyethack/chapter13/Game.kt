@@ -2,7 +2,7 @@ package com.bignerdranch.nyethack.chapter13
 
 fun main(args: Array<String>) {
 
-  val player = Player("Madrigal")
+  val player = Player("Julito")
   println(player.name + "TheBrave")
   player.castFireball()
 
@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
   player.auraColor()
 }
 
-fun printPlayerStatus(player: Player) {
+private fun printPlayerStatus(player: Player) {
   println(
     "(Aura: ${player.auraColor()})" +
       "(Blessed: ${if (player.isBlessed) "YES" else "NO"})"

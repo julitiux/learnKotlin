@@ -1,3 +1,5 @@
+package com.bignerdranch.nyethack.chapter12
+
 import com.bignerdranch.nyethack.chapter12.Player
 
 fun main(args: Array<String>) {
