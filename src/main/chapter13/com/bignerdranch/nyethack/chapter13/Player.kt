@@ -2,7 +2,7 @@ package com.bignerdranch.nyethack.chapter13
 
 class Player(
   _name: String,
-  var healthPoints: Int,
+  var healthPoints: Int = 100,
   var isBlessed: Boolean,
   private var isImmortal: Boolean
 ) {
@@ -13,7 +13,7 @@ class Player(
       field = value.trim()
     }
 
-  constructor(name: String) : this(name, healthPoints = 100, isBlessed = true, isImmortal = false) {
+  constructor(name: String) : this(name, isBlessed = true, isImmortal = false) {
     if (name.lowercase() == "kar") healthPoints = 40
   }
 
