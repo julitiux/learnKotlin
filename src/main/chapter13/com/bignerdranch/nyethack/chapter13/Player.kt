@@ -10,12 +10,12 @@ class Player(
 ) {
 
   var name = _name
-    get() = field.capitalize()
+    get() = "${field.capitalize()} of $hometown"
     private set(value) {
       field = value.trim()
     }
 
-  val hometown: String = selectHometown()
+  val hometown = selectHometown()
 
   private fun selectHometown() = File("data/towns.txt")
     .readText()
@@ -23,9 +23,9 @@ class Player(
     .shuffled()
     .first()
 
-  init{
-    require(healthPoints > 0, {"healthPoints must be greater than zero"})
-    require(name.isNotBlank(), {"Player must have a name"})
+  init {
+    require(healthPoints > 0, { "healthPoints must be greater than zero" })
+    require(name.isNotBlank(), { "Player must have a name" })
   }
 
   constructor(name: String) : this(name, isBlessed = true, isImmortal = false) {
