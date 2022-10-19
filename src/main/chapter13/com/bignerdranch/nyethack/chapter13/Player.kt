@@ -1,5 +1,7 @@
 package com.bignerdranch.nyethack.chapter13
 
+import java.io.File
+
 class Player(
   _name: String,
   var healthPoints: Int = 100,
@@ -13,7 +15,13 @@ class Player(
       field = value.trim()
     }
 
-  val hometown: String
+  val hometown: String = selectHometown()
+
+  private fun selectHometown() = File("data/towns.txt")
+    .readText()
+    .split("\n")
+    .shuffled()
+    .first()
 
   init{
     require(healthPoints > 0, {"healthPoints must be greater than zero"})
