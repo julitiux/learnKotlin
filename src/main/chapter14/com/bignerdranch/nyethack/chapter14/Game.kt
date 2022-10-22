@@ -6,6 +6,10 @@ fun main(args: Array<String>) {
   println(player.name + "TheBrave")
   player.castFireball()
 
+  var currentRoom = Room("Foyer")
+  println(currentRoom.description())
+  println(currentRoom.load())
+
   // Aura
   val auraColor = player.auraColor()
   // Player Status
