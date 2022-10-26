@@ -1,7 +1,11 @@
 package com.bignerdranch.nyethack.chapter14
 
 open class Room(val name: String) {
-  fun description() = "Room: $name"
+  protected open val dangerLevel = 5
+
+  fun description() = "Room: $name" +
+    "Danger level: $dangerLevel"
+
   open fun load() = "Nothing much to see here..."
 }
 
