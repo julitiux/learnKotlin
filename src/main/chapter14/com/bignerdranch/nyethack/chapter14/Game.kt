@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
   println(player.name + "TheBrave")
   player.castFireball()
 
-  var currentRoom = Room("Foyer")
+  var currentRoom: Room = TownSquare()
   println(currentRoom.description())
   println(currentRoom.load())
 
