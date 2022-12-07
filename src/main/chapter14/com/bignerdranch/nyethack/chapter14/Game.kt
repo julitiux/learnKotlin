@@ -1,12 +1,7 @@
 package com.bignerdranch.nyethack.chapter14
 
 fun main(args: Array<String>) {
-
-  val player = Player("Julito")
-  println(player.name + "TheBrave")
-  player.castFireball()
-
-  var currentRoom: Room = TownSquare()
+  
   println(currentRoom.description())
   println(currentRoom.load())
 
@@ -18,17 +13,21 @@ fun main(args: Array<String>) {
   player.auraColor()
 }
 
-private fun printPlayerStatus(player: Player) {
-  println(
-    "(Aura: ${player.auraColor()})" +
-      "(Blessed: ${if (player.isBlessed) "YES" else "NO"})"
-  )
-  println("${player.name} ${player.formatHealthStatus()}")
-}
-
 object Game {
+
+  private val player = Player("Julito")
+  private var currentRoom: Room = TownSquare()
+
   init {
     println("Welcome, adventurer")
+  }
+
+  private fun printPlayerStatus(player: Player) {
+    println(
+      "(Aura: ${player.auraColor()})" +
+        "(Blessed: ${if (player.isBlessed) "YES" else "NO"})"
+    )
+    println("${player.name} ${player.formatHealthStatus()}")
   }
 
 }
