@@ -21,6 +21,8 @@ object Game {
 
       //Player status
       printPlayerStatus(player)
+      print("> Enter your command: ")
+      println("Last command: ${readLine()}")
     }
 
   }
