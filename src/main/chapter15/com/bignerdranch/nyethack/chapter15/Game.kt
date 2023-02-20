@@ -22,7 +22,7 @@ object Game {
       //Player status
       printPlayerStatus(player)
       print("> Enter your command: ")
-      println("Last command: ${readLine()}")
+      println(GameInput(readLine()).processCommand())
     }
 
   }
@@ -35,7 +35,7 @@ object Game {
     println("${player.name} ${player.formatHealthStatus()}")
   }
 
-  private class GameInput(arg: String){
+  private class GameInput(arg: String?){
     private val input = arg ?: ""
     val command = input.split(" ")[0]
     val argument = input.split(" ").getOrElse(1, {""})
