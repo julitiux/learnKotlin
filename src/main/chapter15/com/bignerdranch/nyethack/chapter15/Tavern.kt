@@ -1,4 +1,4 @@
-package com.bignerdranch.nyethack.chapter14
+package com.bignerdranch.nyethack.chapter15
 
 import java.io.File
 
