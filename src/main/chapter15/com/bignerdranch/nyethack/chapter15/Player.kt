@@ -16,6 +16,7 @@ class Player(
     }
 
   val hometown = selectHometown()
+  var currentPosition = Coordinate(0, 0)
 
   private fun selectHometown() = File("data/towns.txt")
     .readText()
