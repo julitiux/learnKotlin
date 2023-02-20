@@ -39,6 +39,8 @@ object Game {
     private val input = arg ?: ""
     val command = input.split(" ")[0]
     val argument = input.split(" ").getOrElse(1, {""})
+
+    private fun commandNotFound() = "I'm not quite sure whta you're trying to do!"
   }
 
 }
