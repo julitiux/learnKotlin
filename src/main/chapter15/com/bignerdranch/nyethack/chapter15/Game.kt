@@ -26,9 +26,9 @@ object Game {
       val newRoom = worldMap[newPosition.y][newPosition.x]
       player.currentPosition = newPosition
       currentRoom = newRoom
-      "OK, you move $direction to the ${newRoom.name}. \n${newRoom.load()}"
+      println ("OK, you move $direction to the ${newRoom.name}. \n${newRoom.load()}")
     } catch (e: Exception) {
-      "Invalid direction: $directionInput"
+      println("Invalid direction: $directionInput")
     }
   }
 
@@ -44,7 +44,7 @@ object Game {
       //Player status
       printPlayerStatus(player)
       print("> Enter your command: ")
-      println(GameInput(readLine()).processCommand())
+      GameInput(readLine()).processCommand()
     }
 
   }
