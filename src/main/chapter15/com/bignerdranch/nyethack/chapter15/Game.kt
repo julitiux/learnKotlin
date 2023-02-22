@@ -10,6 +10,11 @@ object Game {
   private val player = Player("Julito")
   private var currentRoom: Room = TownSquare()
 
+  private var worldMap = listOf(
+    listOf(currentRoom, Room("Tavern"), Room("Back Room")),
+    listOf(Room("Long Corridor"), Room("Generic Room"))
+  )
+
   init {
     println("Welcome, adventurer")
   }
