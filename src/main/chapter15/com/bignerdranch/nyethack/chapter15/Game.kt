@@ -15,6 +15,23 @@ object Game {
     listOf(Room("Long Corridor"), Room("Generic Room"))
   )
 
+  private fun move(directionInput: String) {
+    try {
+      val direction = Direction.valueOf(directionInput.toUpperCase())
+      val newPosition = direction.updateCoordinate(player.currentPosition)
+      if (!newPosition.isInBounds) {
+        throw IllegalStateException("$direction us out of bounds.")
+      }
+
+      val newRoom = worldMap[newPosition.y][newPosition.x]
+      player.currentPosition = newPosition
+      currentRoom = newRoom
+      "OK, you move $direction to the ${newRoom.name}. \n${newRoom.load()}"
+    } catch (e: Exception) {
+      "Invalid direction: $directionInput"
+    }
+  }
+
   init {
     println("Welcome, adventurer")
   }
@@ -40,12 +57,12 @@ object Game {
     println("${player.name} ${player.formatHealthStatus()}")
   }
 
-  private class GameInput(arg: String?){
+  private class GameInput(arg: String?) {
     private val input = arg ?: ""
     val command = input.split(" ")[0]
-    val argument = input.split(" ").getOrElse(1, {""})
+    val argument = input.split(" ").getOrElse(1, { "" })
 
-    fun processCommand() = when (command.toLowerCase()){
+    fun processCommand() = when (command.toLowerCase()) {
       else -> commandNotFound()
     }
 
