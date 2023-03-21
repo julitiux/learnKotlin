@@ -7,20 +7,19 @@ class Player(
   override var healthPoints: Int = 100,
   var isBlessed: Boolean,
   private var isImmortal: Boolean
-): Fightable {
+) : Fightable {
 
-  override var healtPoints: Int
-    get() = TODO("Not yet implemented")
-    set(value) {}
-  override val diceCount: Int
-    get() = TODO("Not yet implemented")
-  override val diceSides: Int
-    get() = TODO("Not yet implemented")
-  override val damageRoll: Int
-    get() = TODO("Not yet implemented")
+  override val diceCount = 3
+  override val diceSides = 6
 
   override fun attack(opponent: Fightable): Int {
-    TODO("Not yet implemented")
+    val damageDealt = if (isBlessed) {
+      damageRoll * 2
+    } else {
+      damageRoll
+    }
+    opponent.healtPoints -= damageDealt
+    return damageDealt
   }
 
   var name = _name
@@ -61,6 +60,7 @@ class Player(
         "has some  minor wounds but is healing quite quickly!"
       else
         "has some minor wounds."
+
       in 15..74 -> "looks pretty hurt."
       else -> "is an awful condition!"
     }
