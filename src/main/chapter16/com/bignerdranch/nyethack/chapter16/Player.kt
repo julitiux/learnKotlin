@@ -9,6 +9,20 @@ class Player(
   private var isImmortal: Boolean
 ): Fightable {
 
+  override var healtPoints: Int
+    get() = TODO("Not yet implemented")
+    set(value) {}
+  override val diceCount: Int
+    get() = TODO("Not yet implemented")
+  override val diceSides: Int
+    get() = TODO("Not yet implemented")
+  override val damageRoll: Int
+    get() = TODO("Not yet implemented")
+
+  override fun attack(opponent: Fightable): Int {
+    TODO("Not yet implemented")
+  }
+
   var name = _name
     get() = "${field.capitalize()} of $hometown"
     private set(value) {
