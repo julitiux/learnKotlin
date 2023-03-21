@@ -4,10 +4,10 @@ import java.io.File
 
 class Player(
   _name: String,
-  var healthPoints: Int = 100,
+  override var healthPoints: Int = 100,
   var isBlessed: Boolean,
   private var isImmortal: Boolean
-) {
+): Fightable {
 
   var name = _name
     get() = "${field.capitalize()} of $hometown"
