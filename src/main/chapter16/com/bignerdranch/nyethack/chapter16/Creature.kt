@@ -1,6 +1,6 @@
 package com.bignerdranch.nyethack.chapter16
 
-import kotlin.random.Random
+import java.util.*
 
 interface Fightable {
   var healtPoints: Int
