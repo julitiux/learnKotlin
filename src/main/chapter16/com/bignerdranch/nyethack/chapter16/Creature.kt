@@ -17,12 +17,19 @@ interface Fightable {
 abstract class Monster(
   val name: String,
   val description: String,
-  override var healtPoints: Int) : Fightable {
+  override var healtPoints: Int
+) : Fightable {
 
   override fun attack(opponent: Fightable): Int {
     val damageDealt = damageRoll
     opponent.healtPoints -= damageDealt
     return damageDealt
   }
+}
+
+class Goblin(
+  name: String = "Goblin",
+  description: String = "A nasty-looking goblin",
+  healtPoints: Int = 30) : Monster(name, description, healtPoints) {
 
 }
