@@ -4,7 +4,7 @@ import java.io.File
 
 class Player(
   _name: String,
-  override var healthPoints: Int = 100,
+  override var healtPoints: Int = 100,
   var isBlessed: Boolean,
   private var isImmortal: Boolean
 ) : Fightable {
@@ -38,22 +38,22 @@ class Player(
     .first()
 
   init {
-    require(healthPoints > 0, { "healthPoints must be greater than zero" })
+    require(healtPoints > 0, { "healthPoints must be greater than zero" })
     require(name.isNotBlank(), { "Player must have a name" })
   }
 
   constructor(name: String) : this(name, isBlessed = true, isImmortal = false) {
-    if (name.lowercase() == "kar") healthPoints = 40
+    if (name.lowercase() == "kar") healtPoints = 40
   }
 
   fun auraColor(): String {
-    val auraVisible = isBlessed && healthPoints > 50 || isImmortal
+    val auraVisible = isBlessed && healtPoints > 50 || isImmortal
     val auraColor = if (auraVisible) "GREEN" else "NONE"
     return auraColor
   }
 
   fun formatHealthStatus() =
-    when (healthPoints) {
+    when (healtPoints) {
       100 -> "is in a excelente condition !"
       in 90..99 -> "has a few scratches."
       in 75..89 -> if (isBlessed)
