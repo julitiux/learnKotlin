@@ -30,6 +30,8 @@ abstract class Monster(
 class Goblin(
   name: String = "Goblin",
   description: String = "A nasty-looking goblin",
-  healtPoints: Int = 30) : Monster(name, description, healtPoints) {
-
+  healtPoints: Int = 30
+) : Monster(name, description, healtPoints) {
+  override val diceCount: Int = 2
+  override val diceSides: Int = 8
 }
