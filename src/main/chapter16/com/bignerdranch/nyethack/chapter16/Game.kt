@@ -1,5 +1,7 @@
 package com.bignerdranch.nyethack.chapter16
 
+import kotlin.system.exitProcess
+
 fun main(args: Array<String>) {
 
   Game.play()
@@ -38,6 +40,22 @@ object Game {
     }
     "Combat complete"
   } ?: "There's nothing here to fight"
+
+  private fun slay(monster: Monster){
+    println("${monster.name} did ${monster.attack(player)} damage")
+    println("${player.name} did ${player.attack(monster)} damage")
+
+    if(player.healtPoints <= 0){
+      println(">>>> You have been defeated! Thnaks for playing. <<<<")
+      exitProcess(0)
+    }
+
+    if(monster.healtPoints <= 0){
+      println(">>>> ${monster.name} has been defeated! <<<<")
+      currentRoom.monster = null
+    }
+
+  }
 
   init {
     println("Welcome, adventurer")
