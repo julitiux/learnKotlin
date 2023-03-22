@@ -36,6 +36,7 @@ object Game {
 
   private fun fight() = currentRoom.monster?.let {
     while (player.healtPoints > 0 && it.healtPoints > 0){
+      slay(it)
       Thread.sleep(1000)
     }
     "Combat complete"
