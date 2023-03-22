@@ -32,6 +32,13 @@ object Game {
     }
   }
 
+  private fun fight() = currentRoom.monster?.let {
+    while (player.healtPoints > 0 && it.healtPoints > 0){
+      Thread.sleep(1000)
+    }
+    "Combat complete"
+  } ?: "There's nothing here to fight"
+
   init {
     println("Welcome, adventurer")
   }
