@@ -1,7 +1,12 @@
 package com.bignerdranch.nyethack.chapter17
 
 class LootBox<T>(item: T) {
+  var open = false
   private var loot: T = item
+
+  fun fetchH(): T?{
+    return loot.takeIf { open }
+  }
 }
 
 class Fedora(val name: String, val value: Int)
