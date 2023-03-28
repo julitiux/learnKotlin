@@ -1,6 +1,6 @@
 package com.bignerdranch.nyethack.chapter17
 
-class Barrel<T>(itam: T)
+class Barrel<T>(val item: T)
 
 fun main(args: Array<String>) {
   var fedoraBarrel: Barrel<Fedora> = Barrel(Fedora("a generic-looking fedora", 15))
