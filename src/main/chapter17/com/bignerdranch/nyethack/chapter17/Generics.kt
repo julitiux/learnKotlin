@@ -13,8 +13,10 @@ class LootBox<T>(item: T) {
   }
 }
 
-class Fedora(val name: String, val value: Int)
-class Coin(val value: Int)
+open class Loot(val value: Int)
+
+class Fedora(val name: String, value: Int) : Loot(value)
+class Coin(value: Int) : Loot(value)
 
 fun main(args: Array<String>) {
   var lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15))
