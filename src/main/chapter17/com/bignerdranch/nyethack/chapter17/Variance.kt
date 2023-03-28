@@ -8,4 +8,6 @@ fun main(args: Array<String>) {
 
   lootBarrel = fedoraBarrel
   lootBarrel.item = Coin(15)
+
+  val myFedora : Fedora = fedoraBarrel.item
 }
