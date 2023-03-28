@@ -38,5 +38,5 @@ fun main(args: Array<String>) {
   coin?.let { println(it.value) }
 
   val fedora = lootBoxOne[1]
-  fedora.let { println(it.name) }
+  fedora?.let { println(it.name) }
 }
