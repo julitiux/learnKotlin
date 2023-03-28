@@ -4,6 +4,8 @@ class LootBox<T : Loot>(vararg item: T) {
   var open = false
   private var loot: Array<out T> = item
 
+  operator fun get(index: Int): T? = loot[index].takeIf { open }
+
   fun fetch(item: Int): T? {
     return loot[item].takeIf { open }
   }
@@ -19,8 +21,10 @@ class Fedora(val name: String, value: Int) : Loot(value)
 class Coin(value: Int) : Loot(value)
 
 fun main(args: Array<String>) {
-  var lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15),
-                                            Fedora("a dazzling magenta fedora", 25))
+  var lootBoxOne: LootBox<Fedora> = LootBox(
+    Fedora("a generic-looking fedora", 15),
+    Fedora("a dazzling magenta fedora", 25)
+  )
   var lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
 
   lootBoxOne.open = true
