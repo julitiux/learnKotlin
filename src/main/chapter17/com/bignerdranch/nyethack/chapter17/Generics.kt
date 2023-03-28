@@ -1,6 +1,6 @@
 package com.bignerdranch.nyethack.chapter17
 
-class LootBox<T>(item: T) {
+class LootBox<T : Loot>(item: T) {
   var open = false
   private var loot: T = item
 
