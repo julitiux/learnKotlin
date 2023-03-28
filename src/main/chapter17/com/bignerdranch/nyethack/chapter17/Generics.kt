@@ -4,7 +4,7 @@ class LootBox<T>(item: T) {
   var open = false
   private var loot: T = item
 
-  fun fetchH(): T?{
+  fun fetch(): T?{
     return loot.takeIf { open }
   }
 }
@@ -17,7 +17,7 @@ fun main(args: Array<String>){
   var lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
 
   lootBoxOne.open = true
-  lootBoxOne.fetchH()?.run {
+  lootBoxOne.fetch()?.run {
     println("You retrieve $name from the box!")
   }
 }
