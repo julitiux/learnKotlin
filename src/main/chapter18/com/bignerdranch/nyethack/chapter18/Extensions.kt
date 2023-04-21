@@ -7,6 +7,9 @@ fun <T> T.easyPrint(): T {
   return this
 }
 
+val String.numVowels
+  get() = count { "aeiou".contains(it) }
+
 fun main(args: Array<String>) {
   "Mandrigal has left the building".easyPrint().addEnthusiam().easyPrint()
   42.easyPrint()
