@@ -1,6 +1,7 @@
 package com.bignerdranch.nyethack.chapter18
 
 import java.io.File
+import com.bignerdranch.nyethack.chapter18.extensions.random
 
 class Player(
   _name: String,
@@ -34,8 +35,7 @@ class Player(
   private fun selectHometown() = File("data/towns.txt")
     .readText()
     .split("\n")
-    .shuffled()
-    .first()
+    .random()
 
   init {
     require(healtPoints > 0, { "healthPoints must be greater than zero" })
