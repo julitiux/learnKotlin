@@ -13,4 +13,5 @@ val String.numVowels
 fun main(args: Array<String>) {
   "Mandrigal has left the building".easyPrint().addEnthusiam().easyPrint()
   42.easyPrint()
+  "How many vowels?".numVowels.easyPrint()
 }
