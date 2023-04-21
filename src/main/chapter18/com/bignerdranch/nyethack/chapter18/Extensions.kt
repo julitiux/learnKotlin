@@ -8,6 +8,6 @@ fun Any.easyPrint(): Any {
 }
 
 fun main(args: Array<String>) {
-  "Mandrigal has left the building".addEnthusiam().easyPrint()
+  "Mandrigal has left the building".easyPrint().addEnthusiam().easyPrint()
   42.easyPrint()
 }
