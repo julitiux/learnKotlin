@@ -3,5 +3,5 @@ fun main() {
   println(adversary.utterGreenting())
 
   val friendshipLevel = adversary.determineFriendshipLevel()
-  println(friendshipLevel.toLowerCase())
+  println(friendshipLevel?.toLowerCase())
 }
