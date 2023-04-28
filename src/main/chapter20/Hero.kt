@@ -7,4 +7,5 @@ fun main() {
 
   val adversaryHitPoints: Int = adversary.hitPoints
   println(adversaryHitPoints.dec())
+  println(adversaryHitPoints.javaClass)
 }
