@@ -4,10 +4,11 @@ import com.sun.istack.internal.Nullable;
 public class Jhava {
 
   private int hitPoints = 52489112;
+  private String greeting = "BLARGH";
 
   @NotNull
   public String utterGreenting() {
-    return "BLARGH";
+    return greeting;
   }
 
   @Nullable
@@ -17,5 +18,13 @@ public class Jhava {
 
   public int hetHitPoints() {
     return hitPoints;
+  }
+
+  public String getGreeting() {
+    return greeting;
+  }
+
+  public void setGreeting(String greeting) {
+    this.greeting = greeting;
   }
 }
