@@ -16,7 +16,7 @@ public class Jhava {
     return null;
   }
 
-  public int hetHitPoints() {
+  public int getHitPoints() {
     return hitPoints;
   }
 
