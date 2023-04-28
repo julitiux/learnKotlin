@@ -12,3 +12,5 @@ fun main() {
   adversary.greeting = "Hello, Hero"
   println(adversary.utterGreenting())
 }
+
+fun makeProclamation() = "Greating, beast!"
