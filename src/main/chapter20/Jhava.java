@@ -6,16 +6,16 @@ public class Jhava {
   private int hitPoints = 52489112;
   private String greeting = "BLARGH";
 
-  public static void main(String[] args){
+  public static void main(String[] args) {
     System.out.println(Hero.makeProclamation());
 
     System.out.println("Spells:");
     Spellbook spellbook = new Spellbook();
-    for(String spell : spellbook.spells){
+    for (String spell : spellbook.spells) {
       System.out.println(spell);
     }
 
-    System.out.println("Max spell count: " +  Spellbook.MAX_SPELL_COUNT);
+    System.out.println("Max spell count: " + Spellbook.MAX_SPELL_COUNT);
 
     Spellbook.getSpellbookGreeting();
   }
@@ -42,7 +42,11 @@ public class Jhava {
     this.greeting = greeting;
   }
 
-  public void offerFood(){
+  public void offerFood() {
     Hero.handOverFood("pizza");
+  }
+
+  public void extendHandInFriendship() throws Exception {
+    throw new Exception();
   }
 }
