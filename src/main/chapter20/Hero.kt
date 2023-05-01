@@ -15,6 +15,7 @@ fun main() {
   println(adversary.utterGreenting())
 
   adversary.offerFood()
+  adversary.extendHandInFriendship()
 }
 
 fun makeProclamation() = "Greating, beast!"
