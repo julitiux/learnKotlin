@@ -1,5 +1,7 @@
 import com.sun.istack.internal.NotNull;
 import com.sun.istack.internal.Nullable;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
 
 public class Jhava {
 
@@ -18,6 +20,8 @@ public class Jhava {
     System.out.println("Max spell count: " + Spellbook.MAX_SPELL_COUNT);
 
     Spellbook.getSpellbookGreeting();
+
+    Function1<String, Unit> translator = Hero.getTranslator();
   }
 
   @NotNull
