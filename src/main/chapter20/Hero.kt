@@ -17,6 +17,7 @@ fun main() {
 
 fun makeProclamation() = "Greating, beast!"
 
+@JvmOverloads
 fun handOverFood(leftHand: String = "berries", rightHand: String = "beef"){
   println("Mmm... you hand over some delicious $leftHand and $rightHand.")
 }
