@@ -15,7 +15,13 @@ fun main() {
   println(adversary.utterGreenting())
 
   adversary.offerFood()
-  adversary.extendHandInFriendship()
+
+  try {
+    adversary.extendHandInFriendship()
+  } catch (e: Exception) {
+    println("Begone, foul beast!")
+  }
+
 }
 
 fun makeProclamation() = "Greating, beast!"
