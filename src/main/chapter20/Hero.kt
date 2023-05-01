@@ -13,6 +13,8 @@ fun main() {
 
   adversary.greeting = "Hello, Hero"
   println(adversary.utterGreenting())
+
+  adversary.offerFood()
 }
 
 fun makeProclamation() = "Greating, beast!"
