@@ -14,6 +14,8 @@ public class Jhava {
     for(String spell : spellbook.spells){
       System.out.println(spell);
     }
+
+    System.out.println("Max spell count: " +  Spellbook.MAX_SPELL_COUNT);
   }
 
   @NotNull
