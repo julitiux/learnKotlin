@@ -26,6 +26,8 @@ fun main() {
 
 }
 
+val translator = { utterance: String -> println(utterance.toLowerCase().capitalize()) }
+
 fun makeProclamation() = "Greating, beast!"
 
 @JvmOverloads
