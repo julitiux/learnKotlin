@@ -49,4 +49,12 @@ public class Jhava {
   public void extendHandInFriendship() throws Exception {
     throw new Exception();
   }
+
+  public void apologize() {
+    try {
+      Hero.acceptApology();
+    } catch (Exception e){
+      System.out.println("Caught!");
+    }
+  }
 }
