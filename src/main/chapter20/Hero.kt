@@ -20,7 +20,7 @@ fun main() {
 fun makeProclamation() = "Greating, beast!"
 
 @JvmOverloads
-fun handOverFood(leftHand: String = "berries", rightHand: String = "beef"){
+fun handOverFood(leftHand: String = "berries", rightHand: String = "beef") {
   println("Mmm... you hand over some delicious $leftHand and $rightHand.")
 }
 
@@ -28,7 +28,8 @@ class Spellbook {
   @JvmField
   val spells = listOf("Magic Ms. L", "Lay on Hans")
 
-  companion object{
+  companion object {
+    @JvmField
     val MAX_SPELL_COUNT = 10
   }
 }
